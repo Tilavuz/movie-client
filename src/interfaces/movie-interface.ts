@@ -1,22 +1,18 @@
 import { ActorInterface, CategoryInterface, GenreInterface, RatingInterface } from "./short-interface";
 
-export interface VideoInterface {
-  _id: string;
-  url: string;
-  quality: string;
-  format: string;
-}
-
 export interface MovieInterface {
   _id: string;
   rating: RatingInterface;
   genres: GenreInterface[];
   actors: ActorInterface[];
-  video: VideoInterface;
+  video: string;
   category: CategoryInterface;
   is_paid: boolean;
   duration: number;
   country: string;
   year: number;
   age_restriction: boolean;
+  title: string;
+  photo: string;
+  big_photo: string;
 }

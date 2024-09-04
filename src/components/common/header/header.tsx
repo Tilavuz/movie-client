@@ -1,10 +1,8 @@
 import { ModeToggle } from "@/components/mode-toggle";
 import SearchInput from "@/components/search-input";
 import SiteLogo from "@/components/site-logo";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
+import AuthForm from "../auth-form";
 
 export default function Header() {
   return (
@@ -23,27 +21,10 @@ export default function Header() {
           </li>
         </ul>
         <div className="flex items-end gap-2">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant={"ghost"} className="p-2">
-                <Search />
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="top-[80px] w-full max-w-[800px]">
-              <DialogHeader>
-                <DialogTitle></DialogTitle>
-                <DialogDescription></DialogDescription>
-              </DialogHeader>
-              <SearchInput />
-            </DialogContent>
-          </Dialog>
+          <SearchInput />
           <ModeToggle />
-          <Link className="border px-2 py-1 rounded-md font-bold" to={"/"}>
-            Kirish
-          </Link>
-          <Link className="border px-2 py-1 rounded-md" to={"/"}>
-            Ro'yhatdan o'tish
-          </Link>
+          <AuthForm router="login" />
+          <AuthForm router="register" />
         </div>
       </nav>
     </header>

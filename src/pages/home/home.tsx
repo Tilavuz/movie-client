@@ -1,6 +1,5 @@
 import MovieCarousel from "@/components/common/movie-carousel";
 import MainCarousel from "./main-carousel"
-import VideoPlayer from "@/components/video-player";
 
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
 
         </aside>
       </div>
-      <VideoPlayer filename="1e2c7991-a5a4-4731-8afe-8fad0b504be7.mp4" />
     </div>
   );
 }
