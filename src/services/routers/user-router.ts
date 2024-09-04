@@ -1,4 +1,5 @@
 export const userRouter = {
   login: '/login',
-  register: '/register'
+  register: '/register',
+  user: '/auth'
 }

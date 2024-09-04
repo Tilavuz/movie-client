@@ -25,6 +25,7 @@ export default function MainCarousel() {
       try {
         const movies: MovieInterface[] | string =
           await movieService.getSomeMovies({ skip: 0, count: 6 });
+          
         if (typeof movies === "string") {
           throw new Error(movies);
         }
